@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Lista de personas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let user of users | async" size-xl="2"  size-lg="6"  size-lg="4" size-xl="3">
+        <ion-card>
+          <ion-card-content>
+
+            <ion-avatar>
+              <img [src]="user.picture.medium" />
+            </ion-avatar>
+            <h1>{{ user.name.first }} {{ user.name.last }}</h1>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia,
+            inventore autem corrupti laborum fugiat enim? Minus, vitae dolorem
+            laboriosam officia in commodi sunt harum possimus labore quia,
+            distinctio debitis iure.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
